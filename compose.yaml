@@ -1,0 +1,44 @@
+# Taobao bridge. Everything listens on 127.0.0.1; Tailscale Serve publishes
+# the API (8450) and the web view (8451) to the tailnet. CDP (9222) is never published.
+name: taobao-bridge
+
+services:
+  chromium:
+    image: lscr.io/linuxserver/chromium@sha256:6d2a8da6a45d4083a7287211a619ca29fdb518ebea0ef562c27392ba2f6698d2
+    container_name: taobao-chromium
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: Asia/Shanghai
+      LC_ALL: zh_CN.UTF-8
+      CUSTOM_USER: ${WEB_VIEW_USER:-angel}
+      PASSWORD: ${WEB_VIEW_PASSWORD:?set WEB_VIEW_PASSWORD in .env}
+      CHROME_CLI: --remote-debugging-port=9222 https://www.taobao.com
+    volumes:
+      - ./config:/config
+    shm_size: 1gb
+    security_opt:
+      - seccomp=unconfined
+    ports:
+      - 127.0.0.1:3910:3000   # web view (http)
+      - 127.0.0.1:3911:3001   # web view (https, self-signed)
+      - 127.0.0.1:8790:8790   # bridge API (lives in this network namespace)
+    restart: unless-stopped
+
+  bridge:
+    build: ./bridge
+    container_name: taobao-bridge-api
+    network_mode: service:chromium
+    depends_on:
+      - chromium
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8790"
+      CDP_URL: http://127.0.0.1:9222
+      DATA_DIR: /data
+      BRIDGE_TOKEN: ${BRIDGE_TOKEN:?set BRIDGE_TOKEN in .env}
+      WEB_VIEW_URL: ${WEB_VIEW_URL:-}
+      DAILY_CALLS: ${DAILY_CALLS:-60}
+    volumes:
+      - ./data:/data
+    restart: unless-stopped

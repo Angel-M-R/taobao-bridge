@@ -1,0 +1,62 @@
+{
+  "api": "mtop.relationrecommend.wirelessrecommend.recommend",
+  "ret": ["SUCCESS::调用成功"],
+  "v": "2.0",
+  "data": {
+    "mainInfo": { "totalResults": "5000", "totalPage": "100", "page": "2", "pageSize": "48" },
+    "itemsArray": [
+      {
+        "item_id": "1076055715397",
+        "title": "重力星球K98键幽夜<span class=H>机械键盘</span>男生无线办公电竞游戏台式电脑通用",
+        "pic_path": "https://img.alicdn.com/imgextra/i2/2206587637172/O1CN019prnXecjaiD2XrKe_!!2206587637172-2-alimamacc.png",
+        "price": "599",
+        "priceShow": { "preText": "", "price": "599", "priceDesc": "优惠后", "unit": "¥" },
+        "realSales": "1000+人付款",
+        "nick": "重力星球旗舰店",
+        "shopInfo": { "indTagText": "品牌旗舰", "title": "重力星球旗舰店" },
+        "procity": "广东 东莞",
+        "auctionURL": "http://click.simba.taobao.com/cc_im?p=x",
+        "isP4p": "true",
+        "icons": [{ "alt": "24小时内发" }, { "alt": "退货宝" }]
+      },
+      {
+        "item_id": "941151774005",
+        "title": "雾影 H98<span class=H>机械</span><span class=H>键盘</span>蓝牙三模2.4G无线有线游戏电竞家用商务打字外设",
+        "pic_path": "https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/2218552931116/O1CN01WryLT41K7B4iZemx5_!!4611686018427384620-0-item_pic.jpg",
+        "price": "259",
+        "priceShow": { "preText": "", "price": "159", "priceDesc": "优惠后", "unit": "¥" },
+        "realSales": "2000+人付款",
+        "nick": "雾影数码旗舰店",
+        "shopInfo": { "title": "雾影数码旗舰店" },
+        "procity": "广东 东莞",
+        "auctionURL": "//detail.tmall.com/item.htm?id=941151774005&ns=1",
+        "isP4p": "false",
+        "icons": [{}, {}, { "alt": "退货宝" }, { "alt": "包邮" }]
+      },
+      {
+        "item_id": "755590472532",
+        "title": "狼蛛S99无线蓝牙键盘机械手感笔记本电脑办公电竞游戏有线F高颜值",
+        "pic_path": "//g-search3.alicdn.com/img/bao/uploaded/i4/i2/2181507237/O1CN01nUM8lD23KbEwQoLFc_!!0-item_pic.jpg",
+        "price": "89",
+        "priceShow": { "price": "89" },
+        "realSales": "1万+人付款",
+        "nick": "aula狼蛛华凌度专卖店",
+        "procity": "广东 深圳",
+        "auctionURL": "//item.taobao.com/item.htm?id=755590472532",
+        "isP4p": "false"
+      },
+      {
+        "item_id": "1098914095674",
+        "title": "五面热升华68配列热插拔有线机械键盘",
+        "pic_path": "https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/2222394444893/O1CN01ERzBvqK2XQH1KKMX~crop,67,0,519,519~_!!2222394444893.png",
+        "price": "49.9",
+        "priceShow": { "price": "49.9", "priceDesc": "补贴价" },
+        "realSales": "46人收货",
+        "nick": "tb904504174976",
+        "procity": "浙江 杭州",
+        "auctionURL": "//item.taobao.com/item.htm?id=1098914095674",
+        "isP4p": "false"
+      }
+    ]
+  }
+}

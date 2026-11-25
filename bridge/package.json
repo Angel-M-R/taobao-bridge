@@ -1,0 +1,15 @@
+{
+  "name": "taobao-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Search-only HTTP bridge to a logged-in Taobao browser session",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "playwright-core": "1.49.1"
+  }
+}
